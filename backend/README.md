@@ -1,4 +1,4 @@
-TP Full-Stack  Gestión de Turnos para Peluquería
+TP Full-Stack  Gestión de Turnos para Peluquería
 Dante Novoa 6to5ta G1
 
 database: Configura la conexión a la base de datos SQLite y la creación inicial de las tablas.
@@ -21,10 +21,10 @@ cd tp-fullstackpeluqueria
 
 Paso 2 Activar el entorno virtual e instalar librerías
 
- Activar el entorno 
+ Activar el entorno 
 .\venv\Scripts\activate
 
- Instalar las librerías necesarias
+ Instalar las librerías necesarias
 pip install -r backend/requirements.txt
 
 Paso 3 Iniciar el Backend servidor de FastAPI
@@ -96,17 +96,17 @@ el Same-Origin Policy es una seguridad que traen los navegadores para evitar que
 
 En mi proyecto el frontend esta en localhost:5500 y la API en localhost:8000 Como son puertos distintos el navegador lo detecta como origenes diferentes y por defecto te bloquea ns que para arreglarlo configurr el middleware de CORS en FastAPI agregando permisos explicitos para que el servidor le diga al navegador que dale permiso a localhost:5500 para pedirme datos que está todo bien
 
-Pregunta5  Separación de responsabilidades
+Pregunta5  Separación de responsabilidades
 Separr el Manager de los endpoints de FastAPI para no mezclar la logica de la bas de datos con las rutas HTTP esto hace que el codigo sea mucho msa limpio si orto dia cambio las consultas SQL o la base de datos solo toco el Manager y las rutas de FastAPI ni se enteran
 
 La inyección de dependencias la uso para manejar las conexiones a la base de datos de forma eficiente abriendo y cerrando la conexion en cada peticion si abriera una conexion manualmente en cada linea de codigo la memoria de la compu explotariaa y la bse de datos se terminaria bloqueando
 
-Pregunta6  JSON como formato de intercambio
+Pregunta6  JSON como formato de intercambio
 va JSON porque es facil de entender tanto para las personas como para el codigo JavaScript y Python lo entienden facilmente
 
 Cuando mandamos un JSON en el body de una peticio Pydantic lo recibe en el backend y revisa campo por campo que todo cumpla con los tipos y limites que le fijamos
 
-Pregunta7  Statelessness (sin estado)
+Pregunta7  Statelessness (sin estado)
 que HTTP sea stateless significa que el servidor no guarda ningun recuerdo de las peticiones que le hicimos ante cada consulta que viaja es totalmente independiente y tiene que llevar toda la informacion necesaria para procesarse
 
 En mi proyecto el estado con la informacion guardada no vive en el servidor de Python sino en la base de datos SQLite
