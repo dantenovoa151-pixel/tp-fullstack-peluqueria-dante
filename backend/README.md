@@ -2,17 +2,11 @@ TP Full-Stack  Gestión de Turnos para Peluquería
 Dante Novoa 6to5ta G1
 
 database: Configura la conexión a la base de datos SQLite y la creación inicial de las tablas.
-
 models: Define los esquemas de Pydantic para validar tipos de datos y restricciones de los turnos.
-
 managers: Contiene la lógica de negocio y ejecuta las consultas SQL directas CRUD
-
 main.py Backend: Inicializa FastAPI define los endpoints rutas HTTP y configura el middleware de CORS
-
 api.js: Realiza las peticiones asincronas fetch para enviar y pedir datos al servidor
-
 ui.js: Modifica el DOM directamente renderiza las tarjetas muestra errores y resetea el formulario
-
 main.js Frontend: Es el controlador principal Captura eventos clicks envíos de formulario y coordina a api.js con ui.js
 
 holaa este proyecto trata de una pagina pra pedir y registrar turnos en una peluqueria, usando FastAPI en el backend y HTML, CSS y JavaScript en el frontend
@@ -118,4 +112,3 @@ que HTTP sea stateless significa que el servidor no guarda ningun recuerdo de la
 En mi proyecto el estado con la informacion guardada no vive en el servidor de Python sino en la base de datos SQLite
 
 La ventaja gigante de esto es que si el dia de mañana la pagina crece mucho y necesito poner 3 servidores en paralelo para soportar mas usuarios cualquier servidor le va a poder responder a cualquier cliente sin importar cual lo atendio antes porque ninguno guarda datos en su memoria interna
-
